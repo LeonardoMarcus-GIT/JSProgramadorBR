@@ -1,11 +1,14 @@
-//Boolean
-//Null
-//Undefined
-//Number
-//String
-// Tudo que estiver nessa linha vai ser um comentário
+// + Adição
+// - Subtração
+// * Multiplicação
+// / Divisão
+// % Módulo
+// ++ Incremento
+// -- Decremento
 
+let a = 17;
+let b = 15;
 
-let a = 1;
+let c = a % b;
 
-console.log(a)
+console.log(c)
