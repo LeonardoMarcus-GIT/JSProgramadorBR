@@ -1,58 +1,39 @@
-// + Adição
-// - Subtração
-// * Multiplicação
-// / Divisão
-// % Módulo
-// ++ Incremento
-// -- Decremento
+// Nome do aluno -  nota 1 - nota 2 - média - Aprovado/ Reprovado
 
-let nota1 = 1.0;
-let nota2 = 6.0;
 
-const media = (nota1 + nota2) /2;
+const nomes =["Igor", "José", "Mária"]
+const notasA=[7.0, 6.5, 9.5]
+const notasB=[8.0, 7.0, 8.5]
 
-if (media >= 7){
-    console.log("Você passou com média " + media);
-}
-else {
-    console.log("Sua nota " + media + " Não foi o suficiente para passar ");
+function media(n1,n2){
+    return (n1+n2) /2
 }
 
-let conceito = ""
+function passou(media){
 
-if(media >=8){
+    if(media >7){
+        return "Aprovado"
+    }else{
+        return "Reprovado"
+    }
 
-    conceito = "Ótimo";
-}
-else if( media > 6.5){
-    conceito = "Bom"
-
-
-}else {
-
-    conceito ="regular"
+    
 }
 
-console.log(media)
-console.log(conceito)
 
+for(index in nomes){
 
-switch(conceito){
+    var nota1 = notasA[index]
+    var nota2 = notasB[index]
 
-    case "Ótimo":
-        console.log("Parábens, você é 10.")
-        break;
+    var m = media(nota1, nota2)
 
-    case "Bom":
-        console.log("Você está quase perfeito.")
-        break;
-
-    case "regular":
-        console.log("Estude mais um pouco.")
-        break; 
-    default:
-        console.log( "Houve algum erro.")
-        break;
-
-
+    console.log(nomes[index]+
+                 " - " +
+                nota1+
+                 " - " +
+                nota2+
+                 " - " + 
+                media(nota1, nota2) + " - " + passou(m))
+         
 }
