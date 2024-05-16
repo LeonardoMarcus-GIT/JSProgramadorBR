@@ -6,9 +6,53 @@
 // ++ Incremento
 // -- Decremento
 
-let a = 17;
-let b = 15;
+let nota1 = 1.0;
+let nota2 = 6.0;
 
-let c = a % b;
+const media = (nota1 + nota2) /2;
 
-console.log(c)
+if (media >= 7){
+    console.log("Você passou com média " + media);
+}
+else {
+    console.log("Sua nota " + media + " Não foi o suficiente para passar ");
+}
+
+let conceito = ""
+
+if(media >=8){
+
+    conceito = "Ótimo";
+}
+else if( media > 6.5){
+    conceito = "Bom"
+
+
+}else {
+
+    conceito ="regular"
+}
+
+console.log(media)
+console.log(conceito)
+
+
+switch(conceito){
+
+    case "Ótimo":
+        console.log("Parábens, você é 10.")
+        break;
+
+    case "Bom":
+        console.log("Você está quase perfeito.")
+        break;
+
+    case "regular":
+        console.log("Estude mais um pouco.")
+        break; 
+    default:
+        console.log( "Houve algum erro.")
+        break;
+
+
+}
